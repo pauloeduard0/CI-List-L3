@@ -1,4 +1,4 @@
-from CsvUtils import sendcsv
+from src.main.utils.CsvUtils import sendcsv
 import csv
 
 df = sendcsv()
@@ -23,13 +23,12 @@ def platz(result):
 def escolher(escolhido, tipo):
     if escolhido == 'P1':
         save1 = platz(tipo)
-        with open("output.csv", "w", newline="") as f:
+        with open('../resources/output.csv', "w", newline="") as f:
             writer = csv.writer(f)
             writer.writerows(save1)
 
     elif escolhido == 'P2':
         save2 = plubz(tipo)
-        with open("output.csv", "w", newline="") as f:
+        with open('../resources/output.csv', "w", newline="") as f:
             writer = csv.writer(f)
             writer.writerows(save2)
-

@@ -1,5 +1,5 @@
 import unittest
-from CsvUtils import sendcsv
+from src.main.utils.CsvUtils import sendcsv
 
 
 class TestCsvutils(unittest.TestCase):

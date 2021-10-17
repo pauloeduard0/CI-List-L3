@@ -1,4 +1,4 @@
-from ServiceGame import escolher
+from src.main.service.ServiceGame import escolher
 
 
 class Game:

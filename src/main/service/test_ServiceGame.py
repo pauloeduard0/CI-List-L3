@@ -1,7 +1,7 @@
 import unittest
-from ServiceGame import platz, plubz, escolher
-from Platform import platform
-from Publishers import publisher
+from src.main.service.ServiceGame import platz, plubz, escolher
+from src.main.model.Platform import platform
+from src.main.model.Publishers import publisher
 
 
 class TestServiceGame(unittest.TestCase):
@@ -24,17 +24,16 @@ class TestServiceGame(unittest.TestCase):
 
     def test_csv_is_create_platform(self):
         escolher('P1', platform('Wii'))
-        with open('output.csv') as arquivo:
+        with open('../resources/output.csv') as arquivo:
             conteudo = arquivo.readlines()
         self.assertEqual(15, len(conteudo))
 
     def test_csv_is_create_publisher(self):
         escolher('P2', publisher('Electronic Arts'))
-        with open('output.csv') as arquivo:
+        with open('../resources/output.csv') as arquivo:
             conteudo = arquivo.readlines()
         self.assertEqual(5, len(conteudo))
 
 
 if __name__ == '__main__':
     unittest.main()
-
