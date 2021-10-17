@@ -1,5 +1,5 @@
 import unittest
-from ServiceGame import platz, plubz
+from ServiceGame import platz, plubz, escolher
 from Platform import platform
 from Publishers import publisher
 
@@ -21,6 +21,18 @@ class TestServiceGame(unittest.TestCase):
     def test_games_ElectronicArts(self):
         electronicarts = plubz(publisher('Electronic Arts'))
         self.assertEqual(5, len(electronicarts))
+
+    def test_csv_is_create(self):
+        escolher('P1', platform('Wii'))
+        with open('output.csv') as arquivo:
+            conteudo = arquivo.readlines()
+        self.assertEqual(15, len(conteudo))
+
+    def test_csv_is_create2(self):
+        escolher('P2', publisher('Electronic Arts'))
+        with open('output.csv') as arquivo:
+            conteudo = arquivo.readlines()
+        self.assertEqual(5, len(conteudo))
 
 
 if __name__ == '__main__':
