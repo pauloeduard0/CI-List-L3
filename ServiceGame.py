@@ -1,4 +1,7 @@
 from CsvUtils import sendcsv
+import csv
+import pandas as pd
+import json
 
 df = sendcsv()
 
@@ -19,25 +22,20 @@ def platz(result):
     return pl
 
 
-'''
-class ServiceGame(sendcsv()):
-    # df_games = pd.read_csv('vendas-games.csv', delimiter=',')
-    # df_games = pd.DataFrame(df_games.iloc[:, [0, 1, 2, 3, 5, 10]])
+class ServiceGame:
 
-    platz()
-    plubz()
-        for plub in publisher():
-        pu = []
-        pu.append(df_games.loc[df_games['publisher'] == plub])
-        
-    import csv
-    #with open('vendas-games.csv') as csv_file:
-    csv_reader = csv.reader(csv_file, delimiter=',')
-    
+    escolha = input('P1 para Plataforma ou P2 para Publisher: ')
+    if escolha == 'P1':
+        tipo1 = input('Digite a plataforma desejada: ')
+        save1 = platz(tipo1)
+        with open("output.csv", "w", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerows(save1)
 
-    df_games = pd.DataFrame(csv_reader)
-    csv_reader.__next__()
-
-    for row in csv_reader:
-        print(row[0] + ', ' + row[1] + ', ' + row[2] + ', ' + row[3] + ', ' + row[4] + ', ' + row[5])
-'''
+    elif escolha == 'P2':
+        tipo2 = input('Digite a publicadora desejada: ')
+        save2 = plubz(tipo2)
+        with open("output.csv", "w", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerows(save2)
+    pass
