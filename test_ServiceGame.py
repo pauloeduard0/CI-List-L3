@@ -22,13 +22,13 @@ class TestServiceGame(unittest.TestCase):
         electronicarts = plubz(publisher('Electronic Arts'))
         self.assertEqual(5, len(electronicarts))
 
-    def test_csv_is_create(self):
+    def test_csv_is_create_platform(self):
         escolher('P1', platform('Wii'))
         with open('output.csv') as arquivo:
             conteudo = arquivo.readlines()
         self.assertEqual(15, len(conteudo))
 
-    def test_csv_is_create2(self):
+    def test_csv_is_create_publisher(self):
         escolher('P2', publisher('Electronic Arts'))
         with open('output.csv') as arquivo:
             conteudo = arquivo.readlines()
