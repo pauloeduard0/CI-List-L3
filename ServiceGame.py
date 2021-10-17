@@ -20,21 +20,16 @@ def platz(result):
     return pl
 
 
-def escolher(escolha):
-    if escolha == 'P1':
-        tipo1 = input('Digite a plataforma desejada: ')
-        save1 = platz(tipo1)
+def escolher(escolhido, tipo):
+    if escolhido == 'P1':
+        save1 = platz(tipo)
         with open("output.csv", "w", newline="") as f:
             writer = csv.writer(f)
             writer.writerows(save1)
-    elif escolha == 'P2':
-        tipo2 = input('Digite a publicadora desejada: ')
-        save2 = plubz(tipo2)
+
+    elif escolhido == 'P2':
+        save2 = plubz(tipo)
         with open("output.csv", "w", newline="") as f:
             writer = csv.writer(f)
             writer.writerows(save2)
 
-
-class ServiceGame:
-    escolha = input('P1 para Plataforma ou P2 para Publisher: ')
-    escolher(escolha)
