@@ -23,6 +23,10 @@ Devemos instalar a biblioteca Pandas para criarmos um Data Frame:
 pip install pandas
 ```
 
+## Rodando a interface
+
+Para rodarmos a interface devemos abrir o arquivo Game.py e dar play para escolher uma publicadora ou plataforma.
+
 ## ⚙️ Executando os testes
 
 Para executar os testes automatizados você precisa acessar os arquivos test_ e rodar a classe TestServiceGame.
