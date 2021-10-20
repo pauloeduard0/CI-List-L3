@@ -1,4 +1,4 @@
-# CI-List-L3
+# CI-List-L3 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/pauloeduard0/CI-List-L3/Python%20application)
 
 # Projeto desenvolvido para realização de testes automatizados
 
