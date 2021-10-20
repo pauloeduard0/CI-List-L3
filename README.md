@@ -17,10 +17,12 @@ IDE Pycharm ou não
 
 ### 🔧 Instalação
 
-Devemos instalar a biblioteca Pandas para criarmos um Data Frame:
+Devemos instalar a biblioteca Pandas para criarmos um Data Frame e Pytest para realizarmos os testes:
+Existentes também em requirements.txt
 
 ```
 pip install pandas
+pip install pytest
 ```
 
 ## Rodando a interface
@@ -29,7 +31,11 @@ Para rodarmos a interface devemos abrir o arquivo Game.py e dar play para escolh
 
 ## ⚙️ Executando os testes
 
-Para executar os testes automatizados você precisa acessar os arquivos test_ e rodar a classe TestServiceGame.
+Para executar os testes automatizados no terminal basta escrever pytest ou dar play nos arquivos test_:
+
+```
+pytest
+```
 
 ### 🔩 Analise os testes de ponta a ponta
 
