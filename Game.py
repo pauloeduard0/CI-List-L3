@@ -1,4 +1,4 @@
-from src.main.service.ServiceGame import escolher
+from ServiceGame import escolher
 import csv
 
 
@@ -10,7 +10,7 @@ class Game:
     elif escolha == 'P2':
         tipo = input('Digite a publicadora desejada: ')
         escolher(escolha, tipo)
-    arquivo = open('../resources/output.csv')
+    arquivo = open('output.csv')
 
     linhas = csv.reader(arquivo)
 
